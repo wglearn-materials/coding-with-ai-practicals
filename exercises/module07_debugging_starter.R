@@ -1,4 +1,4 @@
-# Module 7 starter: debugging checkpoint helper
+# Module 10 starter: debugging checkpoint helper (historical filename retained)
 
 files_to_fix <- c(
   "buggy_01_load_data.R",

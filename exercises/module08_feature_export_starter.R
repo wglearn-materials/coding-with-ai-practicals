@@ -1,4 +1,4 @@
-# Module 8 starter: export feature scaffold
+# Module 11 starter: export feature scaffold (historical filename retained)
 
 export_summary <- function(data, out_csv = "summary_export.csv") {
   write.csv(data, out_csv, row.names = FALSE)

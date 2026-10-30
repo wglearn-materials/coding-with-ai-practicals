@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parent
@@ -40,13 +41,15 @@ def main():
     print("PASS: greeting; intentional missing-value defect preserved (not a correct analysis)")
     load("synthetic_data_practice").self_test()
     with tempfile.TemporaryDirectory() as directory:
-        subprocess.run([shutil.which("python3") or shutil.which("python"), str(ROOT / "exercises/data_preparation_demo.py")], cwd=directory, check=True)
+        subprocess.run([sys.executable, str(ROOT / "exercises/data_preparation_demo.py")], cwd=directory, check=True)
     executable = shutil.which("Rscript")
     if executable:
+        subprocess.run([executable, "-e", 'invisible(lapply(list.files(commandArgs(TRUE)[1],pattern="[.]R$",full.names=TRUE),parse));cat("PASS: R source syntax\\n")', str(ROOT / "exercises")], check=True)
         result = subprocess.run([executable, "-e", 'stopifnot(requireNamespace("dplyr",quietly=TRUE),requireNamespace("tidyverse",quietly=TRUE));cat("R dependencies available\\n")'], capture_output=True, text=True)
         print("PASS: R dependencies" if result.returncode == 0 else "UNVERIFIED: R package-dependent exercises; install permitted dplyr/tidyverse before class")
         with tempfile.TemporaryDirectory() as directory:
             subprocess.run([executable, str(ROOT / "exercises/data_preparation_demo.R")], cwd=directory, check=True)
+        print("UNVERIFIED: package-dependent R starter execution and debugging outcomes; syntax is not runtime evidence")
     else:
         print("UNVERIFIED: R runtime and package-dependent exercises (Rscript unavailable)")
     print("NOT TESTED: Windows/editor/AI/SSH placement; run the course platform acceptance journey.")

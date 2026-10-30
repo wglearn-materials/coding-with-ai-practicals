@@ -5,6 +5,9 @@ Use invented material only. Do not record private host paths, keys or tokens.
 ## Permission and scope
 - Module 2 processing/disclosure decision:
 - Host platform and Docker/VS Code/Remote SSH versions:
+- Materials reference commit (git rev-parse HEAD in read-repo); integrity check:
+- Separate read-repo / write-repo / sandbox-runtime confirmed; keys outside mounts:
+- Work copy prepared without instructor .git/origin; own remote remains separate:
 - Approved reference and working content:
 - Intended change: greeting handles an empty name as researcher.
 - Tools/extensions checked; local versus remote execution:

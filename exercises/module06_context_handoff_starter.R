@@ -1,4 +1,4 @@
-# Module 6 starter: session handoff summary scaffold
+# Module 9 starter: session handoff summary scaffold (historical filename retained)
 
 create_handoff <- function(completed, next_steps, risks) {
   list(

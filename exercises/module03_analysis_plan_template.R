@@ -1,4 +1,4 @@
-# Module 3 starter: planning template (comments only)
+# Module 6 starter: planning template (historical filename retained; comments only)
 
 # 1) Load patient_survey_messy.csv into a data frame.
 # 2) Check column names and data types.

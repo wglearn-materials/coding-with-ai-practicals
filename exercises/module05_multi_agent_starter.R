@@ -1,4 +1,4 @@
-# Module 5 starter: planner-coder-reviewer handoff scaffold
+# Module 8 starter: planner-coder-reviewer handoff scaffold (historical filename retained)
 
 plan_steps <- c(
   "Load and inspect data",

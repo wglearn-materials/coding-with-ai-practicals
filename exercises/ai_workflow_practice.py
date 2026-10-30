@@ -1,14 +1,15 @@
-"""Python practice for Modules 3-10, using only invented course data.
+"""Python practice for Modules 3-11, using only invented course data.
 
 Run: python3 ai_workflow_practice.py
 Module 3: explain the greeting and request a small, reviewed change.
-Module 4: checkpoint the file and inspect one AI-proposed diff.
-Module 5: save an analysis_plan.md before changing the implementation.
-Module 6: load the fictional CSV, report missing counts, summarize and plot.
-Module 7: use separate planner, coder and reviewer sessions with bounded scope.
-Module 8: save a Markdown handoff describing evidence and unresolved decisions.
-Module 9: diagnose the intentionally wrong average below; add regression tests.
-Module 10: export a reviewed grouped summary as CSV and an HTML table.
+Module 4: verify reference/work access and remote execution before agent tools.
+Module 5: checkpoint the file and inspect one AI-proposed diff.
+Module 6: save an analysis_plan.md before changing the implementation.
+Module 7: load the fictional CSV, report missing counts, summarize and plot.
+Module 8: use separate planner, coder and reviewer sessions with bounded scope.
+Module 9: save a Markdown handoff describing evidence and unresolved decisions.
+Module 10: diagnose the intentionally wrong average below; add regression tests.
+Module 11: export a reviewed grouped summary as CSV and an HTML table.
 
 The average deliberately divides by the original row count after omitting None.
 Preserve this exercise defect until the debugging task. Correct test results are
