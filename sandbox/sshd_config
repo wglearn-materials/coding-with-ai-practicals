@@ -1,0 +1,19 @@
+Port 2222
+ListenAddress 0.0.0.0
+HostKey /home/learner/.ssh/ssh_host_ed25519_key
+PidFile /home/learner/.ssh/sshd.pid
+AuthorizedKeysFile /etc/ssh/sandbox_authorized_keys
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PubkeyAuthentication yes
+PermitRootLogin no
+UsePAM no
+AllowUsers learner
+AllowAgentForwarding no
+AllowTcpForwarding local
+PermitOpen 127.0.0.1:* localhost:*
+GatewayPorts no
+X11Forwarding no
+PermitTunnel no
+PermitUserEnvironment no
+Subsystem sftp internal-sftp

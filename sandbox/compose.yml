@@ -1,0 +1,35 @@
+services:
+  sandbox:
+    build:
+      context: .
+      args:
+        LEARNER_UID: ${LEARNER_UID:-1000}
+        LEARNER_GID: ${LEARNER_GID:-1000}
+    ports:
+      - "127.0.0.1:22222:2222"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 256
+    mem_limit: 4g
+    cpus: 2
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,size=1g,mode=1777
+    volumes:
+      - type: bind
+        source: ${COURSE_REFERENCE_PATH:-./read-repo}
+        target: /workspace/reference
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${COURSE_WORK_PATH:-./write-repo}
+        target: /workspace/work
+        bind:
+          create_host_path: false
+      - type: volume
+        source: learner-home
+        target: /home/learner
+    restart: "no"
+volumes:
+  learner-home:

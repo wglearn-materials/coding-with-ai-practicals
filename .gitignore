@@ -1,0 +1,11 @@
+.private/
+.env
+.env.*
+*.pem
+__pycache__/
+outputs/
+.DS_Store
+Thumbs.db
+sandbox/read-repo/
+sandbox/write-repo/
+sandbox/sandbox.pub
