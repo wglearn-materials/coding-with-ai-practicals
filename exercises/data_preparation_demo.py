@@ -1,5 +1,9 @@
-"""Invented-only Module 2 demo. No input files, network or anonymisation claim.
+"""Optional data-preparation reference from Module 5 onward, not a Module 2 task.
 Run: python3 data_preparation_demo.py
+Expected: 6 rows and 1 missing score before and after dropping name and age.
+Group summaries stay unchanged; group C still reveals its single score.
+These scores use a separate scale, not the core survey's 1-10 validation rule.
+No input files, network or anonymisation claim.
 All values are constructed here, not sampled/fitted from real records.
 """
 

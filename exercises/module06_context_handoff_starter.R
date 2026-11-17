@@ -1,4 +1,6 @@
-# Module 9 starter: session handoff summary scaffold (historical filename retained)
+# Module 9: optional R handoff scaffold (historical filename retained).
+# This prints a list; it does not save SESSION_NOTES.md.
+# The claims below are unverified. Check them against your own results and replace them.
 
 create_handoff <- function(completed, next_steps, risks) {
   list(

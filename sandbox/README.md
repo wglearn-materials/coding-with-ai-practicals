@@ -1,6 +1,13 @@
-# Coding with AI: agent risk and containment
+# Optional legacy Docker SSH kit
 
-Read Module 4 (modules/local-sandbox.html) and the recipes before running this kit.
+This kit is a later reference, not the setup assigned in Modules 3-4. Those
+lessons use inline commands and the `cwai-day1` project. This kit uses
+`cwai-learner-sandbox` and SSH alias `cwai-sandbox`. Do not mix their commands,
+keys or folders. If you choose to try the kit, use a separate fresh
+`$HOME/cwai/cwai-sandbox-kit` directory (PowerShell:
+`$HOME\cwai\cwai-sandbox-kit`). Do not replace the day-one setup.
+
+Read the recipes and Module 4's boundary principles before running it.
 Approved invented material only. Local execution does not make hosted Copilot
 local, restrict outbound networking, or authorize research-data processing.
 
@@ -15,10 +22,12 @@ requirements, especially supported Linux distributions, architecture and KVM.
 Requires internet for building/VS Code/hosted AI. Allow 4 GB container RAM plus
 Docker/editor headroom; image and packages need additional disk space.
 
-Extract into a fresh ordinary course directory, not a real repository. From a
-HOST terminal in this directory:
+Extract the kit contents directly into that fresh ordinary course directory,
+not a real repository. `sandbox.py` must be immediately inside it, not an extra
+nested archive folder. From a HOST terminal:
 
 ```sh
+cd "$HOME/cwai/cwai-sandbox-kit"
 python3 sandbox.py init
 python3 sandbox.py up
 python3 sandbox.py trust
@@ -28,6 +37,7 @@ python3 sandbox.py check
 On Windows, use these commands in native PowerShell instead:
 
 ```powershell
+Set-Location "$HOME\cwai\cwai-sandbox-kit"
 py -3 sandbox.py init
 py -3 sandbox.py up
 py -3 sandbox.py trust
@@ -57,15 +67,18 @@ engines are outside this lesson's scope.
 
 ## Connect VS Code
 
-### Cloned-materials route (preferred)
+### Optional route after receiving the Module 5 materials
 
-From your course parent directory, with a clean read-repo clone and a new
-write-repo prepared using its prepare_work.py, copy the kit outside both mounts.
-Do not run init inside the read-repo clone: keys would become readable there.
+For a separately assigned legacy workspace under `$HOME/cwai/cwai-legacy`, with
+a clean `read-repo` clone and a new `write-repo` prepared using its prepare_work.py,
+copy the kit outside both mounts. This is not a migration of the active
+`cwai-day1` environment. Do not run init inside the read-repo clone: keys would
+become readable there.
 
 macOS Terminal / supported Linux:
 
 ```sh
+cd "$HOME/cwai/cwai-legacy"
 cp -R read-repo/sandbox sandbox-runtime
 cd sandbox-runtime
 python3 sandbox.py init --reference ../read-repo --work ../write-repo
@@ -77,6 +90,7 @@ python3 sandbox.py check
 Native Windows PowerShell:
 
 ```powershell
+Set-Location "$HOME\cwai\cwai-legacy"
 Copy-Item -Recurse read-repo/sandbox sandbox-runtime
 Set-Location sandbox-runtime
 py -3 sandbox.py init --reference ../read-repo --work ../write-repo
@@ -116,8 +130,9 @@ do not expose this loopback-only kit publicly.
 
 ## Git destination is independent
 
-The fresh work folder has no Git history or origin yet; configure your own
-private course repository in Module 5. A mounted existing .git retains its
+The fresh work folder has no Git history or origin. Local commits do not require
+a remote. Configure only an explicitly authorized private destination if one is
+provided; publication is optional. A mounted existing .git retains its
 remotes. SSH does not reset origin, and edits to mounted files affect the host.
 Before a later push inspect git remote -v, git remote get-url --push origin and
 the branch/upstream. GitHub authentication is separate from container SSH.

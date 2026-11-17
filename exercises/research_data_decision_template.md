@@ -1,12 +1,16 @@
-# Research data decision worksheet — before AI assistance
+# Research data decision worksheet
 
 Use fictional examples for the course. For a real project, complete this within approved institutional storage; do not put participant values, keys, confidential protocols, or identifying examples in a public repository or unapproved chat. This record supports a discussion, not automated legal clearance.
 
-## Classroom route: one case, four answers
+Optional practice from Module 5 onward. Module 2 uses on-page questions, not this
+worksheet. Complete one short activity below; the project checklist is optional.
+
+## One invented example, four answers
 
 Alex Morgan is an invented participant: P007, age 43, depression score 18. A protected key connects the code to Alex. The fictional study permits analysis in its approved university environment but forbids sending participant records to outside services.
 
-Choose Alex's case B, or a different fictional case in the lesson. In pairs, take 10 minutes:
+Use Alex's example, or choose another invented table from Module 2. In pairs, take
+about 10 minutes:
 
 1. **Describe:** What needs protection? Which clue tells you that?
 2. **Check:** What analysis and sharing are permitted? What evidence is missing?
@@ -15,7 +19,9 @@ Choose Alex's case B, or a different fictional case in the lesson. In pairs, tak
 
 For invented scores 2, missing and 6, the observed-value mean should be 4 and the missing count 1. If all scores are missing, the code must flag that no valid mean is available. These tests check behavior, not whether omitting missing answers is appropriate for a real study.
 
-Then change one condition: internal processing is no longer permitted. Which real-data action must stop? Compare with the worked decision in [Module 2](../data-before-ai.html#exercise).
+Then change one condition: internal processing is no longer permitted. Which
+real-data action must stop? Check your reasoning against the
+[Module 2 questions](../data-before-ai.html#exercise).
 
 The detailed fields below are an optional project-review checklist, not additional required classroom questions.
 
@@ -81,28 +87,14 @@ Processing includes reading, calculating, changing and disclosing data. Check in
 
 Lower exposure does not grant authorization. If processing itself is forbidden, do not access or transform the real records to anonymize them or generate synthetic data. Use unrelated fictional examples while permission is clarified.
 
-## Course practice — fictional cases B, F, H
+## Expected output
 
-Start with case B from [Data Before AI](../data-before-ai.html#examples): Alex Morgan, P007, age 43, depression score 18, with a protected participant key. Give the classification clues, permitted use, possible exposure, selected solution and fallback. Cases F and H are optional comparisons. Distinguish forbidden external disclosure from a lack of authority to process the records at all. Compare with the worked decision on the lesson page.
+One short decision record: what needs protection, what is permitted, what the
+assistant would receive and your next action. Include an invented code-help
+example and its expected result. Identify the records and outputs that must stay
+outside assistant access. The checklist supports review; it is not legal clearance.
 
-Expected output: one short decision record for your chosen case, with an invented code-help prompt, the files/outputs the assistant must not access, and a test of the generated code. For example, mean(x, na.rm = TRUE) on invented x <- c(2, NA, 6) should return 4; count the one missing answer separately. All-missing input gives NaN in this R expression; the pipeline must flag that no valid mean is available. This checks code, not whether omitting missing values is appropriate for the real study.
-
-Add one counterfactual per decision: change either the permission (internal processing is no longer authorized) or the information flow (an agent sends real printed rows to a remote model). State which part of your route must change and why. Record your prediction before revealing the lesson's case reasoning; do not treat the interactive feedback as institutional clearance.
-
-## 5. Practical preparation — fictional data only
-
-Open the [Module 2 preparation mini-lesson](../data-before-ai.html#prepare-data). Keep real records, linkage keys, private schemas and confidential methods out of the AI workspace.
-
-Preparation methods are choices, not a required six-stage anonymisation procedure. For code help, start with independently invented values and the minimum shareable schema (columns and their types); do not transform real records without permission.
-
-- Task the AI actually needs to help with; minimum shareable columns and types:
-- Fictional before/after transformation: pseudonymisation / generalisation / aggregation / reviewed redaction; why this technique helps:
-- What it does **not** remove: linkage, rare combinations, free text, small cells/differencing, metadata, logs or confidentiality restrictions:
-- If a key exists, where it stays separate and who may access it (no actual key or identifier):
-- Independently invented synthetic example: schema, types, a missing value and an edge case; confirm it was not fitted to or copied from restricted data:
-- Predicted versus actual code result and utility check; what research question the transformation can no longer answer:
-- If using the optional Python or R demonstration, chosen route and observed evidence; label unexecuted code as unexecuted:
-- Real-data processing permission versus disclosure permission; intended recipient/configuration and approval evidence still missing:
-- Proceed within authorised scope / keep AI on invented examples / hold and ask the data steward; reason:
-
-Removing names, using a code, suppressing a toy small cell or inventing records is not a release certificate. Synthetic teaching values test code, not scientific conclusions. If the schema or protocol is confidential too, use an unrelated generic example. When processing itself is not permitted, do not transform the restricted records.
+For a reminder of minimization versus invention, see
+[Module 2's comparison](../data-before-ai.html#prepare-data). Do not transform
+restricted records without permission. Invented tests check code, not scientific
+conclusions or permission to release data.

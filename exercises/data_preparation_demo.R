@@ -1,5 +1,9 @@
-# Invented-only Module 2 demo: base R, no files/network, no anonymisation claim.
+# Optional reference from Module 5 onward, not a Module 2 assignment.
 # Run: Rscript data_preparation_demo.R
+# Expected: 6 rows and 1 missing score before and after dropping name and age.
+# Summaries stay unchanged; group C still reveals its single score.
+# This uses a separate score scale, not the core survey's 1-10 validation rule.
+# Base R only; no input files, network or anonymisation claim.
 # All values are constructed here, not sampled/fitted from real records.
 invented_rows <- function() {
   data.frame(name = c("Alex Example", "Blair Example", "Casey Example",

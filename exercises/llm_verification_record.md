@@ -1,4 +1,7 @@
-# Module 1: LLM verification record
+# Optional LLM verification record
+
+For practice from Module 5 onward. Module 1 ends with on-page questions and does
+not assign this worksheet. Keep only the parts useful for your current task.
 
 Use only the invented examples below. This is an evidence record, not approval
 to process participant data or adopt a missing-data method.
@@ -7,13 +10,13 @@ to process participant data or adopt a missing-data method.
 
 Write or inspect Python/R code returning the mean of observed values and the
 number missing. An all-missing input returns no numeric mean, never zero.
-Use an approved assistant and runner if available; otherwise use the supplied
-reference in Module 1, predict results and mark them as supplied, not executed.
+Use an approved assistant and runner if available. Otherwise discuss the expected
+results below and mark them as predictions, not executed results.
 No package installation or access to research files is needed.
 
 ## Expected Output
 
-Complete predictions before inspecting the reference or generating code.
+Complete predictions before inspecting proposed code or generating it.
 
 | Invented input | Expected mean | Expected missing | Observed result | Evidence status |
 | --- | --- | --- | --- | --- |
@@ -21,7 +24,7 @@ Complete predictions before inspecting the reference or generating code.
 | 2, missing, 6 | 4 | 1 | | not run / supplied / run by me |
 | missing, missing | no numeric mean | 2 | | not run / supplied / run by me |
 
-Python's supplied reference uses None; R uses NA. These are explicit missing
+Use None in Python or NA in R. These are explicit missing
 markers for this exercise, not a complete policy for every file/data type.
 
 ## Request and Boundaries
@@ -50,7 +53,7 @@ markers for this exercise, not a complete policy for every file/data type.
 - Local execution does not guarantee that assistant tool output remains local.
 - This record does not authorize participant-data access or a model endpoint.
 
-## Transfer to Module 2
+## Recheck the data decision
 
 What would change if these values belonged to participant P007?
 Name what you would check before letting an assistant receive records or results:

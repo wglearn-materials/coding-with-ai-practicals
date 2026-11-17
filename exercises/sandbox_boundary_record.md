@@ -1,4 +1,8 @@
-# Agent risk and containment record
+# Optional legacy sandbox record
+
+This record belongs to the optional helper-based sandbox kit, whose SSH alias is
+`cwai-sandbox`. It is not assigned in Modules 3-4. The current lessons use inline
+setup and `cwai-day1`; do not mix the two sets of commands or greeting examples.
 
 Use invented material only. Do not record private host paths, keys or tokens.
 

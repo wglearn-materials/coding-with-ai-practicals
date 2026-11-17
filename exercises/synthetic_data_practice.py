@@ -1,4 +1,12 @@
-"""Generate invented test data only; no participant inputs or privacy certification."""
+"""Optional test-data exercise from Module 5 onward; no participant inputs.
+
+Check: python3 synthetic_data_practice.py --self-test
+Save a new file: python3 synthetic_data_practice.py --output invented_test.csv
+Expected: 600 rows, 300 per group, with 30 missing scores per group.
+Group A uses scores 0-12; B uses 8-20. These are not the core survey's 1-10
+scores: do not use this file as a replacement survey. Existing files are refused.
+The invented design is not population evidence or a privacy guarantee.
+"""
 import argparse
 import csv
 from pathlib import Path
