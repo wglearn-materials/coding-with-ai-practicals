@@ -1,1 +1,0 @@
-Invented course values: 2, 4, 6. Expected average: 4.
